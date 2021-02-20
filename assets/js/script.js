@@ -35,7 +35,7 @@ let questions = [{
 ]
 
 startEl.on('click', function startQuiz() {
-  displayCurrentQuestion();
+  showQuestion();
   setTime();
 })
 
