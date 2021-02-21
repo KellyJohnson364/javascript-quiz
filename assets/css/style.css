@@ -1,0 +1,87 @@
+
+/* Sets style for page*/
+:root{
+    background-color: #33393f;
+    color:#fff;
+    text-align: center ;
+    font-size: 30px;
+    list-style-type: none;
+}
+header {
+  height: 150px;
+}
+
+/* Style for h1*/
+h1, .success {
+    font-size: 50px;
+    margin-bottom: 5px;
+    color:#080227;
+}
+
+/* Style for button */
+button, .btn{
+    font-size: 15px;
+    font-weight: bolder;
+    width: 10%;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border: 8px solid black;
+    text-align: center;
+    background-color: #4f5358; 
+    text-decoration: none;
+    padding:10px;
+   
+    transition: all 0.5s 
+     ease-in-out;
+    } 
+button:hover, .btn:hover{transition: all 0.5s ease-in-out;
+    box-shadow: inset 0px 0px 12px 
+    #080227, 
+    0 0 25px 
+    #080227;
+    } 
+
+.askIt {
+  font-weight: bold;
+  align-items: center;
+  width: 50%;
+  overflow-wrap: break-word;
+  height: 100px;
+  margin: 10px auto 10px auto;
+  background-color: #4f5358;
+  font-size: 25px;
+  padding: 10px;
+  border: 2px dashed black;
+
+}  
+.fail {
+  font-size: 50px;
+    margin-bottom: 5px;
+    color:hsl(0, 90%, 23%);
+}  
+
+
+/* Changes for screensize 992px or smaller */
+
+@media screen and (max-width: 992px) {
+
+    h1 {
+      color:  #562E52;
+    }
+   
+  
+/* Changes for screen size 768px or smaller */
+
+  @media screen and (max-width: 768px) {
+    
+ /* Change the h1 color */
+ 
+    h1 {
+      color: #5381af;
+
+    }
+
+    button {
+      width: 60%;
+    }
+  }
