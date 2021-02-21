@@ -5,6 +5,8 @@ let timerEl=$('.timerCount');
 let startEl=$('.start-button');
 let msgDiv=$('#msg')
 let scoreBoard=$('#highScores')
+var entry = { initials: 'AAA', score: 0};
+localStorage.setItem('Entry', JSON.stringify(entry))
 let choice=[];
 let currentQuestion = 0;
 let score = 0;
@@ -101,8 +103,8 @@ if (t == questions[currentQuestion].correctAnswer) {
       over();
 }}else {
     displayMessage("fail", "Try again! -5 seconds")
-  if (timeLeft > 5) {
-    timeLeft -=5;
+  if (timeLeft > 10) {
+    timeLeft -=10;
   }else {
     over();
 }}})}
@@ -130,14 +132,23 @@ function displayMessage(type, message) {
 }
 
 function renderHighScores() { 
-  var entry = { initials: initials, score: score};
-  localStorage.setItem('Entry', JSON.stringify(entry));
-  oldScores = localStorage.getItem("Entry");
+ oldScores = localStorage.getItem("Entry");
   var scores = JSON.parse(oldScores);
-  $(scoreBoard).text(entry.initials + ": " + entry.score + " points")
+  console.log(scores.score)
+  if (scores.score >= score) {
+    $(scoreBoard).text("High Score : " + scores.initials + ": " + scores.score + " points")
+  }
+  else {
+    entry = { initials: initials, score: score};
+    localStorage.setItem('Entry', JSON.stringify(entry))
+    $(scoreBoard).text("High Score : " + entry.initials + ": " + entry.score + " points")
+  
 
+ 
 console.log(scores)
-  
-  
 
+  }
 }
+
+
+
