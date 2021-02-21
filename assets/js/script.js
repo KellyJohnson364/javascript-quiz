@@ -16,8 +16,8 @@ let initials
 
 
 let questions = [{
-  question: "Answer this question?",
-  choices: ["Okay I will", "I'd rather not", "You do it", "Make me"],
+  question: "Where in the HTML should the Javascript be placed?",
+  choices: ["Bottom", "Top", "CSS", "Middle"],
   correctAnswer: 0
 },
 {
@@ -27,7 +27,7 @@ let questions = [{
 },
 {
   question: "Answer this question?",
-  choices: ["Okay I will", "I'd rather not", "You do it", "Make me"],
+  choices: ["Okay I will", "I'd_rather_not", "You do it", "Make me"],
   correctAnswer: 0
 },
 {
