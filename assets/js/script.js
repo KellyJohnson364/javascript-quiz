@@ -11,28 +11,38 @@ let score = 0;
 let timeLeft=" "
 let timer
 let initials
-
-
+let oldScores
+let newScore
 
 
 let questions = [{
-  question: "Where in the HTML should the Javascript be placed?",
-  choices: ["Bottom", "Top", "CSS", "Middle"],
-  correctAnswer: 0
-},
-{
-  question: "How about this one?",
-  choices: ["Fine", "no", "yes", "off"],
+  question: "What language is used to style the page?",
+  choices: ["HTML", "English", "CSS", "C++"],
   correctAnswer: 2
 },
 {
-  question: "Answer this question?",
-  choices: ["Okay I will", "I'd_rather_not", "You do it", "Make me"],
+  question: "Which language is the most functional?",
+  choices: ["Javascript", "Html", "CSS", "Bootstrap"],
   correctAnswer: 0
 },
 {
-  question: "How about this one?",
-  choices: ["Fine", "no", "yes", "off"],
+  question: "What does DOM stand for?",
+  choices: ["Digital_Ordered_Monitoring", "Document_Object_Model", "Document_Ordered_Mainainance", "Dominique"],
+  correctAnswer: 1
+},
+{
+  question: "Fixed variables are also known as what?",
+  choices: ["strict_variables", "figuratives", "literals", "plausibles"],
+  correctAnswer: 2
+},
+{
+  question: "The naming convention popular with Javascript programmers is named after what animal?",
+  choices: ["pig", "dolphin", "porcupine", "camel"],
+  correctAnswer: 3
+},
+{
+  question: "Which method adds a new element to an array (at the end):?",
+  choices: ["plug", "pop", "push", "pull"],
   correctAnswer: 2
 }
 ]
@@ -47,7 +57,6 @@ startEl.on('click', function startQuiz() {
 function setTime() {
   timeLeft = 60;
   timer = setInterval(function() {
-    console.log(timeLeft);
     if (timeLeft > 0) {
       $(timerEl).text(timeLeft + " seconds left.");
       timeLeft--;
@@ -108,8 +117,7 @@ function over() {
   $(timerEl).remove();
   displayMessage("success", "You scored " + score + " points!")
   initials = window.prompt("Enter your initials to log your score");
-  localStorage.setItem("initials", initials);
-  localStorage.setItem("score", score);
+  
   renderHighScores();
 
 }
@@ -121,13 +129,15 @@ function displayMessage(type, message) {
 
 }
 
-function renderHighScores() {
-  let players = localStorage.getItem("initials");
-  let scores = localStorage.getItem("score");
+function renderHighScores() { 
+  var entry = { initials: initials, score: score};
+  localStorage.setItem('Entry', JSON.stringify(entry));
+  oldScores = localStorage.getItem("Entry");
+  var scores = JSON.parse(oldScores);
+  $(scoreBoard).text(entry.initials + ": " + entry.score + " points")
 
-  $(scoreBoard).text(players + ': ' + scores + 'points.')
+console.log(scores)
   
+  
+
 }
-
-
-
