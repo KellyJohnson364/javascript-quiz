@@ -102,7 +102,7 @@ if (t == questions[currentQuestion].correctAnswer) {
 
  // If indexes don't match, 10 seconds is removed from timer and user gets to try until correct button is clicked     
 }}else {
-    displayMessage("fail", "Try again! -5 seconds")
+    displayMessage("fail", "Try again! -10 seconds")
   if (timeLeft > 10) {
     timeLeft -=10;
   }else {
