@@ -11,7 +11,7 @@ header {
   height: 150px;
 }
 
-/* Style for h1*/
+/* Style for h1 and correct answers*/
 h1, .success {
     font-size: 50px;
     margin-bottom: 5px;
@@ -40,7 +40,7 @@ button:hover, .btn:hover{transition: all 0.5s ease-in-out;
     0 0 25px 
     #080227;
     } 
-
+/* Style for Questions*/
 .askIt {
   font-weight: bold;
   align-items: center;
@@ -52,36 +52,11 @@ button:hover, .btn:hover{transition: all 0.5s ease-in-out;
   font-size: 25px;
   padding: 10px;
   border: 2px dashed black;
-
 }  
+/* Wrong answer styles */
 .fail {
   font-size: 50px;
     margin-bottom: 5px;
     color:hsl(0, 90%, 23%);
 }  
 
-
-/* Changes for screensize 992px or smaller */
-
-@media screen and (max-width: 992px) {
-
-    h1 {
-      color:  #562E52;
-    }
-   
-  
-/* Changes for screen size 768px or smaller */
-
-  @media screen and (max-width: 768px) {
-    
- /* Change the h1 color */
- 
-    h1 {
-      color: #5381af;
-
-    }
-
-    button {
-      width: 60%;
-    }
-  }
