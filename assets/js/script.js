@@ -134,7 +134,7 @@ function renderHighScores() {
   var scores = JSON.parse(oldScores);
 
   if (!scores) {
-    let entry = { initials: 'Score to beat', score: 0};
+    let  entry = { initials: initials, score: score};
     localStorage.setItem('Entry', JSON.stringify(entry))
     $(scoreBoard).text("High Score : " + entry.initials + ": " + entry.score + " points");
   }else {
