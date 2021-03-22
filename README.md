@@ -5,4 +5,4 @@ This code quiz focuses on the Javacript fundamentals that we have learned the la
 ![Screenshot 1 of site](./assets/images/screenshot-1.png)
 
 Email: KJ3641402@gmail.com
-Linkedin: linkedin.com/in/KellyJohnson364
+Linkedin: linkedin.com/in/KellyJohnson364(linkedin.com/in/KellyJohnson364)
