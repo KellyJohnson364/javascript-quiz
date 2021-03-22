@@ -38,7 +38,7 @@ let questions = [{
 },
 {
   question: "The naming convention popular with Javascript programmers is named after what animal?",
-  choices: ["pig", "dolphin", "porcupine", "camel"],
+  choices: ["Pig", "Dolphin", "Porcupine", "Camel"],
   correctAnswer: 3
 },
 {
